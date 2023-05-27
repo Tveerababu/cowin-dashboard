@@ -1,7 +1,21 @@
-import CowinDashboard from './components/CowinDashboard'
+import {Chrono} from 'react-chrono'
 
-import './App.css'
+const items = [{title: '2018'}, {title: '2019'}]
 
-const App = () => <CowinDashboard />
+const App = () => (
+  <div className="chrono-container">
+    <Chrono mode="VERTICAL" items={items}>
+      <img
+        src="https://1000logos.net/wp-content/uploads/2022/08/Mumbai-Indians-Logo-2008.png"
+        className="image"
+        alt="chennai-super-kings"
+      />
+      <div>
+        <h1>Mumbai Indians</h1>
+        <p>IPL Team winner for the year 2019 is Mumbai Indians.</p>
+      </div>
+    </Chrono>
+  </div>
+)
 
 export default App
